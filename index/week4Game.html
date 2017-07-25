@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+ </head>
+  <title>Document</title>
+</head>
+<style>
+    
+#magicNumber {
+  height: 200px;
+  text-align: center;
+}
+#yourTotalScore {
+  height: 200px;
+  text-align: center;
+}
+
+#secondRow {
+  height: 200px;
+  text-align: center;
+}
+
+.col-xs-6 {
+  height: 200px;
+  text-align: center;
+}
+
+#header  {
+  color: lightblue;
+  font-size: 30px;
+  
+}
+.col-xs-6 col-sm-3 {
+  text-align: bottom;
+}
+
+</style>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid" id="header">
+    <div class="navbar-header">
+      <p>Crystal Collector Game</p>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-6" id="magicNumber" style="background-color:yellow;">
+                    <p>Magic Number</p>
+              </div>
+              <div class="col-md-6" id="yourTotalScore" style="background-color:pink;">
+                    <p>Your Total Score Is:</p>
+              </div>
+           </div>
+     </div>
+<br>
+    <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-6 col-sm-3" id="diamond"  style="background-color:lavender;">Diamond
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_wcOli9Ap-iHJN6yJ28n3BBdV3eZ4SAgSIJsd1zpZZLENU9F" height="100px" width="100px"></div>
+
+              <div class="col-xs-6 col-sm-3" id="topaz" style="background-color:lavenderblush;">Topaz
+              <img src="http://giselibarbara.com.br/site/wp-content/uploads/2017/02/pedra_safira-300x265.png" height="100px" width="100px"></div>
+                                          <!-- Add clearfix for only the required viewport -->
+              <div class="clearfix visible-xs"></div>
+
+              <div class="col-xs-6 col-sm-3" id="ruby" style="background-color:lightcyan;"">Ruby
+                <img src="http://www.stickpng.com/assets/images/58c5828a09e8bc1b42c7794b.png" height="100px" width="100px"></div>
+                
+              <div class="col-xs-6 col-sm-3" id="amethyst" style="background-color:lightgray;">Amethyst
+              <img src="http://www.allthingsclipart.com/05/amethyst.18.jpg" height="100px" width="100px"></div>
+          </div>
+    </div>
+<br>
+  <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-6 col-sm-3" style="background-color: #98bde2;">Wins</div>
+              <div class="col-xs-6 col-sm-3" style="background-color: lavender;">Losses</div>
+          </div>
+  </div>
+</div>
+<br>
+<footer class="container-fluid text-center" style="background-color: black; color: lightblue;">
+  <p>Footer Text</p>
+</footer>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+   <!-- All your code goes below here-->
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      //Variables
+      var magicNum = Math.floor(Math.random() * 50) + 1;    
+       console.log(magicNum);
+     
+     //user clicks
+      var topaz = Math.round(Math.random() * 10);
+      var ruby =  Math.round(Math.random() * 10);
+      var amethyst = Math.round(Math.random() * 10);
+      var diamond =  Math.round(Math.random() * 10);
+        console.log(topaz);
+        console.log(ruby);
+        console.log(amethyst);
+        console.log(diamond);
+      
+      //Counters:
+      var wins = 0;
+      var losses = 0;
+
+      var totalScore = parseInt(topaz) + parseInt(ruby) + parseInt(diamond) + parseInt(amethyst);
+        console.log(totalScore);
+        
+           $("#topaz").click(function() {
+          yourTotalScore = yourTotalScore + topaz;
+          console.log(yourTotalScore);
+        });
+
+        
+
+  });
+
+
+
+
+
+  </script>
+</body>
+</html>
